@@ -4,7 +4,7 @@
 
 int main(void)
 {
-	char *s1, *s2, *s3, *s4, *s5, *s6, *s7, *s8;
+	char *s1, *s2, *s3, *s4, *s5, *s6, *s7, *s8, *s9, *s10;
 
 	printf("\nTEST ft_strncmp()\n");
 	s1 = "hello";
@@ -23,7 +23,9 @@ int main(void)
  	s8 = "helloo";
  	printf("ER:res=%i\n", strncmp(s7, s8, 3));
 	printf("AR:res=%i\n", ft_strncmp(s7, s8, 3));
-	printf("ER:res=%i\n", strncmp("abcdef", "abc\375xx", 5));
-	printf("AR:res=%i\n", ft_strncmp("abcdef", "abc\375xx", 5));
+	s9 = "abcdef";
+	s10 = "abc\375xx";
+	printf("ER:res=%i\n", strncmp(s9, s10, 5));
+	printf("AR:res=%i\n", ft_strncmp(s9, s10, 5));
 	return (0);
 }
