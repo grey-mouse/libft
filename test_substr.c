@@ -31,10 +31,10 @@ int main() {
     free(result4);
     
     // Test 5: NULL input string
-    /*char *result5 = ft_substr(NULL, 0, 5);
-	printf("Test 5 - ER: null\n");
+    char *result5 = ft_substr(NULL, 0, 5);
+	printf("Test 5 - ER: (null)\n");
     printf("AR: %s\n", result5);
-    free(result5);*/
+    free(result5);
     
     // Test 6: Substring in empty string
     char *input1 = "";
@@ -43,5 +43,12 @@ int main() {
 	printf("AR: %s\n", result6);
 	free(result6);
     
+	//Test 7
+    char *input2 = "hola";
+    char *result7 = ft_substr(input2, 0, -1);
+	printf("Test 7 - ER: hola\n");
+	printf("AR: %s\n", result7);
+	free(result7);
+
 	return (0);
 }
