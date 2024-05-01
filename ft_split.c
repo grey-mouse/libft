@@ -6,7 +6,7 @@
 /*   By: niarygin <niarygin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:15:48 by niarygin          #+#    #+#             */
-/*   Updated: 2024/05/01 18:04:59 by niarygin         ###   ########.fr       */
+/*   Updated: 2024/05/01 20:54:59 by niarygin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ static char	**ft_split_str(char const *s, char c, char **str_array, int word_cou
 			word_len++;
 		}
 		str_array[word_i] = (char *)malloc(sizeof(char) * (word_len + 1));
-		if (!str_array)
+		if (!str_array[word_i])
 			return (free_array(str_array, word_i));
 		add_word_to_array(str_array[word_i], s, str_i, word_len);
 		word_len = 0;
