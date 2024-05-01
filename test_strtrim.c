@@ -13,7 +13,7 @@ int main() {
     free(result);
 
     // Test 2: Trimming some characters
-    result = ft_strtrim("hello world", "hlo ");
+	result = ft_strtrim("hello world", "hlo ");
 	printf("Test 2:\nER: ello world\n");
     printf("AR: %s\n", result ? result : "NULL");
     free(result);
@@ -45,6 +45,12 @@ int main() {
     // Test 7: Null set
     result = ft_strtrim("hello world", NULL);
 	printf("Test 7:\nER: NULL\n");
+    printf("AR: %s\n", result ? result : "NULL");
+    free(result);
+
+	// Test 8
+    result = ft_strtrim("lorem ipsum dolor sit amet", "tel");
+	printf("Test 8:\nER: orem ipsum dolor sit am\n");
     printf("AR: %s\n", result ? result : "NULL");
     free(result);
 
