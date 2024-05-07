@@ -6,7 +6,7 @@
 /*   By: niarygin <niarygin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 12:22:08 by niarygin          #+#    #+#             */
-/*   Updated: 2024/05/07 11:11:47 by niarygin         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:44:21 by niarygin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
