@@ -6,7 +6,7 @@
 /*   By: niarygin <niarygin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 14:40:38 by niarygin          #+#    #+#             */
-/*   Updated: 2024/05/07 14:52:42 by niarygin         ###   ########.fr       */
+/*   Updated: 2024/05/07 15:38:12 by niarygin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
