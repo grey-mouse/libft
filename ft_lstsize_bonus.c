@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niarygin <niarygin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/12 19:20:18 by niarygin          #+#    #+#             */
-/*   Updated: 2024/05/13 11:13:58 by niarygin         ###   ########.fr       */
+/*   Created: 2024/05/13 11:12:27 by niarygin          #+#    #+#             */
+/*   Updated: 2024/05/13 11:31:25 by niarygin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Allocates and returns a new node. The member variable ’content’ is initialized
-with the value of the parameter ’content’. The variable ’next’ is initialized to
-NULL.
+/*Counts the number of nodes in a list.
 Parameters:
-- content: The content to create the node with.
-Return value: The new node.*/
+- lst: The beginning of the list.
+Return value: The length of the list.*/
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*new;
-
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	t_list			*tmp;
+	unsigned int	count;
+	
+	tmp = lst;
+	count = 0;
+	while (tmp)
+	{
+		count++;
+		tmp = tmp->next;
+	}
+	return (count);
 }

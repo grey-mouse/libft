@@ -45,6 +45,11 @@ int main()
     printf("Test case 2: ");
     print_list(head2); // Output: 20 -> 10 -> NULL
 	printf("ER: Output: 20 -> 10 -> NULL\n");
-
+	free(int_ptr1);
+	free(int_ptr2);
+	free(int_ptr3);
+	free(new_node1);
+	free(new_node2);
+	free(new_node3);
     return 0;
 }
