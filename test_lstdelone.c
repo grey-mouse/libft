@@ -18,10 +18,7 @@ int main()
     
     printf("Before deletion: content = %s, node addr %p, content addr %p\n", (char*)node->content, node, node->content);
     ft_lstdelone(node, free_str);
-	if (!node)
-    	printf("AR: After deletion: (null)\n");
-	else
-		printf("After delition, node %p, content %p\n", node, node->content);
+	printf("After delition, node %p, content %p\n", node, node->content);
 	
     return 0;
 }
