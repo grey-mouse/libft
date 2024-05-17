@@ -6,9 +6,14 @@
 /*   By: niarygin <niarygin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:42:24 by niarygin          #+#    #+#             */
-/*   Updated: 2024/04/23 09:39:21 by niarygin         ###   ########.fr       */
+/*   Updated: 2024/05/17 09:45:55 by niarygin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*This function checks whether c, which must have the value  of  an  unsigned
+char  or EOF, is a digit (0 through 9).
+Rerturn value: Nonzero if the character c is a digit (0 through 9), and zero
+if not.*/
 
 int	ft_isdigit(int c)
 {
