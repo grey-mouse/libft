@@ -6,7 +6,7 @@
 /*   By: niarygin <niarygin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:35:16 by niarygin          #+#    #+#             */
-/*   Updated: 2024/05/17 15:29:09 by niarygin         ###   ########.fr       */
+/*   Updated: 2024/05/17 15:55:34 by niarygin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,32 @@ Return value: The converted value or 0 on error.
 In case of overflow returns -1 (value > LLONG_MAX) or 0 (value < LLONG_MIN).
 */
 
-int	ft_atoi(const char *str)
+static long	calculate_result(const char *str, unsigned int i, int sign)
 {
 	long	result;
-	int		sign;
-	int		i;
+	long	temp_result;
+
+	result = 0;
+	temp_result = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		temp_result = result;
+		result = result * 10 + (str[i] - '0');
+		if (sign == 1 && temp_result > result)
+			return (-1);
+		else if (sign == -1 && temp_result > result)
+			return (0);
+		i++;
+	}
+	return (result);
+}
+
+
+int	ft_atoi(const char *str)
+{
+	long			result;
+	int				sign;
+	unsigned int	i;
 
 	result = 0;
 	sign = 1;
@@ -38,10 +59,6 @@ int	ft_atoi(const char *str)
 			sign = -sign;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
+	result = calculate_result(str, i, sign);
 	return ((int)(result * sign));
 }
