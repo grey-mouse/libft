@@ -6,7 +6,7 @@
 /*   By: niarygin <niarygin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 12:22:08 by niarygin          #+#    #+#             */
-/*   Updated: 2024/05/15 10:34:29 by niarygin         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:40:15 by niarygin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <errno.h>
 
 typedef struct	s_list
 {

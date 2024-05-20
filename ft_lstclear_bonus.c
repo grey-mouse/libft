@@ -6,7 +6,7 @@
 /*   By: niarygin <niarygin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 09:09:50 by niarygin          #+#    #+#             */
-/*   Updated: 2024/05/15 09:39:02 by niarygin         ###   ########.fr       */
+/*   Updated: 2024/05/20 15:43:51 by niarygin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
-	if (!lst)
+	if (!lst || !del)
 		return;
 	while (*lst)
 	{
