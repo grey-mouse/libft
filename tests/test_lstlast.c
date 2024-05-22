@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 #include <stdio.h>
 
 // Function to free memory allocated for the linked list

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 #include <stdio.h>
 
 // Define a sample function to iterate over the content of a list node

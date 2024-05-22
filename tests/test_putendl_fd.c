@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "libft.h"
+#include "../libft.h"
 
 int main() {
     // Test cases
@@ -16,8 +16,8 @@ int main() {
     ft_putendl_fd(test_string, STDERR_FILENO);
 
     // Test case 3: Output the string followed by a newline to a file
-    printf("\nTest case 3: Outputting string '%s' followed by a newline to a file (output.txt)\n", test_string);
-    FILE *file = fopen("output.txt", "w");
+    printf("\nTest case 3: Outputting string '%s' followed by a newline to a file (output_putendl.txt)\n", test_string);
+    FILE *file = fopen("output_putendl.txt", "w");
     if (file == NULL) {
         perror("Failed to open file");
         return 1;

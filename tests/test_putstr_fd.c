@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "libft.h"
+#include "../libft.h"
 
 // Function declaration
 void ft_putstr_fd(char *s, int fd);
@@ -20,8 +20,8 @@ int main() {
     ft_putstr_fd(test_string, STDERR_FILENO);
 
     // Test case 3: Output the string to a file
-    printf("\nTest case 3: Outputting string '%s' to a file (output.txt)\n", test_string);
-    FILE *file = fopen("output.txt", "w");
+    printf("\nTest case 3: Outputting string '%s' to a file (output_putstr.txt)\n", test_string);
+    FILE *file = fopen("output_putstr.txt", "w");
     if (file == NULL) {
         perror("Failed to open file");
         return 1;

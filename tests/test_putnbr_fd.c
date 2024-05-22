@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "libft.h"
+#include "../libft.h"
 
 int main() {
     // Test cases
@@ -18,8 +18,8 @@ int main() {
     //write(STDERR_FILENO, "\n", 1); // Adding a newline for better visualization
 
     // Test case 3: Output the integer to a file
-    printf("\nTest case 3: Outputting integer '%d' to a file (output.txt)\n", test_integer);
-    FILE *file = fopen("output.txt", "w");
+    printf("\nTest case 3: Outputting integer '%d' to a file (output_putnbr.txt)\n", test_integer);
+    FILE *file = fopen("output_putnbr.txt", "w");
     if (file == NULL) {
         perror("Failed to open file");
         return 1;

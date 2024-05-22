@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-#include "libft.h"
+#include "../libft.h"
 
 int main() {
     char c;
@@ -17,5 +17,6 @@ int main() {
     c = '9';
     printf("\nER:%c -> %c", c, toupper(c));
     printf("\nAR:%c -> %c", c, ft_toupper(c));
+	printf("\n");
     return 0;
 }

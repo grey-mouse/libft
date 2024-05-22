@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h> 
-#include "libft.h"
+#include "../libft.h"
 
 int main() {
     // Test cases
@@ -14,7 +14,7 @@ int main() {
 
     // Test case 2: Output the character to a file
     // Open a file in write mode (create if not exist, truncate existing content)
-    FILE *file = fopen("output.txt", "w");
+    FILE *file = fopen("output_putchar.txt", "w");
     if (file == NULL) {
         perror("Failed to open file");
         return 1;
@@ -29,7 +29,7 @@ int main() {
     }
 
     // Output the character to the file
-    printf("\nTest case 2: Outputting character '%c' to a file (output.txt)\n", test_char);
+    printf("\nTest case 2: Outputting character '%c' to a file (output_putchar.txt)\n", test_char);
     ft_putchar_fd(test_char, file_fd);
 
     // Close the file

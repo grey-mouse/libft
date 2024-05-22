@@ -1,6 +1,5 @@
-#include "libft.h"
+#include "../libft.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 // Sample function to print index and character
