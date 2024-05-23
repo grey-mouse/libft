@@ -1,6 +1,7 @@
-#include <bsd/string.h>
+#include <string.h>
 #include <stdio.h>
 #include "../libft.h"
+//For linux: #include <bsd/string.h>
 
 int main() {
     //Basic Substring Search

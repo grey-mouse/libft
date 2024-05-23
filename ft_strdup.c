@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*This function allocates sufficient memory for a copy of the string s1, does
+the copy, and returns a pointer to it. The pointer may subsequently be used as
+an argument to the function free.
+If insufficient memory is available, NULL is returned and errno is set to
+ENOMEM.*/
+
 static char	*ft_strcpy(char *dest, const char *src)
 {
 	int	i;
@@ -32,7 +38,7 @@ char	*ft_strdup(const char *s1)
 
 	dup = (char *) malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!dup)
-		return (0);
+		return (NULL);
 	ft_strcpy(dup, s1);
 	return (dup);
 }

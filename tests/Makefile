@@ -6,7 +6,8 @@
 SRC_DIR = ..
 TEST_DIR = .
 LIB_NAME = libft.a
-CC = gcc
+CC = cc
+# For Linux: CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 # Source and object files
@@ -39,7 +40,8 @@ test: $(LIB_NAME) $(TEST_BINARIES)
 
 # Compile test binaries
 $(TEST_BINARIES): $(TEST_DIR)/%.o: $(TEST_DIR)/%.c $(LIB_NAME)
-	$(CC) $(CFLAGS) -o $@ $< -L. -lft -lbsd
+	$(CC) $(CFLAGS) -o $@ $< -L. -lft
+#For linux: 	$(CC) $(CFLAGS) -o $@ $< -L. -lft -lbsd
 
 # Clean up object files, library, and test binaries
 clean:
