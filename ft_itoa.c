@@ -12,16 +12,17 @@
 
 #include "libft.h"
 
-/*Allocates and returns a string representing the integer received as an argument.
-Negative numbers must be handled.
+/*Allocates and returns a string representing the integer received as an
+argument. Negative numbers must be handled.
 Parameters: 
 - n: the integer to convert.
-Return value: The string representing the integer. NULL if the allocation fails.*/
+Return value: The string representing the integer. NULL if the allocation
+fails.*/
 
 static unsigned int	ft_number_len(int n)
 {
 	unsigned int	len;
-	
+
 	len = 0;
 	if (n <= 0)
 		len++;

@@ -23,7 +23,7 @@ of ’f’. Returns NULL if the allocation fails.*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
+	char			*str;
 	unsigned int	i;
 
 	i = 0;
@@ -40,4 +40,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-

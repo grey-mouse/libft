@@ -18,7 +18,8 @@ node. Creates a new list resulting of the successive applications of the functio
 Parameters:
 - lst: The address of a pointer to a node.
 - f: The address of the function used to iterate on the list.
-- del: The address of the function used to delete the content of a node if needed.
+- del: The address of the function used to delete the content of a node if
+needed.
 Return value: The new list. NULL if the allocation fails.*/
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -34,7 +35,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		content = f(lst->content);
-		node=ft_lstnew(content);
+		node = ft_lstnew(content);
 		if (!node)
 		{
 			del(content);

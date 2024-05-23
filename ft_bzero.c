@@ -19,7 +19,7 @@ location pointed to by s, by writing zeros (bytes  containing '\0') to that area
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*str;
-	size_t	i;
+	size_t			i;
 
 	str = (unsigned char *) s;
 	i = 0;

@@ -20,7 +20,7 @@ Return value: The length of the list.*/
 int	ft_lstsize(t_list *lst)
 {
 	unsigned int	count;
-	
+
 	count = 0;
 	while (lst)
 	{

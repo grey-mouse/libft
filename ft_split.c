@@ -20,7 +20,7 @@ Parameters:
 Return value: The array of new strings resulting from the split. 
 NULL if the allocation fails.*/
 
-static int	ft_count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -67,7 +67,7 @@ static char	*add_word_to_array(char *word, char const *s, int i, int word_len)
 	return (word);
 }
 
-static char	**ft_split_str(char const *s, char c, char **str_array, int word_count)
+static char	**split_str(char const *s, char c, char **str_arr, int word_count)
 {
 	int	str_i;
 	int	word_i;
@@ -85,15 +85,15 @@ static char	**ft_split_str(char const *s, char c, char **str_array, int word_cou
 			str_i++;
 			word_len++;
 		}
-		str_array[word_i] = (char *)malloc(sizeof(char) * (word_len + 1));
-		if (!str_array[word_i])
-			return (free_array(str_array, word_i));
-		add_word_to_array(str_array[word_i], s, str_i, word_len);
+		str_arr[word_i] = (char *)malloc(sizeof(char) * (word_len + 1));
+		if (!str_arr[word_i])
+			return (free_array(str_arr, word_i));
+		add_word_to_array(str_arr[word_i], s, str_i, word_len);
 		word_len = 0;
 		word_i++;
 	}
-	str_array[word_i] = NULL;
-	return (str_array);
+	str_arr[word_i] = NULL;
+	return (str_arr);
 }
 
 char	**ft_split(char const *s, char c)
@@ -103,10 +103,10 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	word_count = ft_count_words(s, c);
+	word_count = count_words(s, c);
 	str_array = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (!str_array)
 		return (NULL);
-	str_array = ft_split_str(s, c, str_array, word_count);
+	str_array = split_str(s, c, str_array, word_count);
 	return (str_array);
 }

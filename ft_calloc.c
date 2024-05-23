@@ -30,7 +30,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 	size_t	total_size;
-	size_t max_size;
+	size_t	max_size;
 
 	if (count == 0 || size == 0)
 		return (malloc(0));

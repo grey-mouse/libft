@@ -41,7 +41,6 @@ static long	calculate_result(const char *str, unsigned int i, int sign)
 	return (result);
 }
 
-
 int	ft_atoi(const char *str)
 {
 	long			result;
